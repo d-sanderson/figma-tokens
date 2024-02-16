@@ -24,8 +24,14 @@ jobs:
     - name: Build Style Dictionary
       run: npm run build
 
+    - name: Check for changes in generated CSS
+      id: check-changes
+      run: |
+        git diff --exit-code --name-only || echo "::set-output name=changed::true"
+
     - name: Commit Generated Platform Deliverables
-      id: "auto-commit-action"
+      if: steps.check-changes.outputs.changed == 'true'
+      id: auto-commit-action
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update design tokens
