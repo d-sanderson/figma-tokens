@@ -19,7 +19,7 @@ jobs:
         node-version: '14'
 
     - name: Install Dependencies
-      run: npm install style-dictionary
+      run: npm install
 
     - name: Generate CSS from Design Tokens
       run: npx style-dictionary build
@@ -28,7 +28,7 @@ jobs:
       run: |
         if [ -d ./build/css/ ]; then
           mkdir -p ./build/css/
-          find ./build/css -maxdepth 1 -type f -name "*.css" -exec mv {} ./build/css/ \;
+          rsync -av ./build/css/ ./build/css/
         else
           echo "Build directory does not exist."
         fi
