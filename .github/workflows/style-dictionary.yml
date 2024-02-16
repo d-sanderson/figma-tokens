@@ -1,10 +1,10 @@
 name: Generate CSS from Design Tokens
 
 on:
+  pull_request:
   push:
     branches:
-      - '*'
-
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Style Dictionary
       run: npm run build
-      
+
     - name: Commit Generated Platform Deliverables
       id: "auto-commit-action"
       uses: stefanzweifel/git-auto-commit-action@v4
