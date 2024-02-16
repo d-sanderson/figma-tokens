@@ -27,8 +27,8 @@ jobs:
     - name: Move CSS to build directory
       run: |
         if [ -d ./build/css/ ]; then
-        mkdir -p ./build/css/
-        mv ./build/css/*.css ./build/css/
+          mkdir -p ./build/css/
+          find ./build/css -maxdepth 1 -type f -name "*.css" -exec mv {} ./build/css/ \;
         else
-        echo "Build directory does not exist."
+          echo "Build directory does not exist."
         fi
