@@ -25,4 +25,10 @@ jobs:
       run: npx style-dictionary build
 
     - name: Move CSS to build directory
-      run: mv ./build/css/*.css ./build/css/
+      run: |
+        if [ -d ./build/css/ ]; then
+        mkdir -p ./build/css/
+        mv ./build/css/*.css ./build/css/
+        else
+        echo "Build directory does not exist."
+        fi
