@@ -21,14 +21,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Generate CSS from Design Tokens
-      run: npx style-dictionary build
-
-    - name: Move CSS to build directory
-      run: |
-        if [ -d ./build/css/ ]; then
-          mkdir -p ./build/css/
-          rsync -av ./build/css/ ./build/css/
-        else
-          echo "Build directory does not exist."
-        fi
+    - name: Build Style Dictionary
+      run: npm run build
+      
+    - name: Commit Generated Platform Deliverables
+      id: "auto-commit-action"
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update design tokens
