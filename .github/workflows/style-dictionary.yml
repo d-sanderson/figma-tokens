@@ -1,0 +1,28 @@
+name: Generate CSS from Design Tokens
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: npm install style-dictionary
+
+    - name: Generate CSS from Design Tokens
+      run: npx style-dictionary build
+
+    - name: Move CSS to build directory
+      run: mv ./build/css/*.css ./build/css/
