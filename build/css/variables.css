@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Feb 2024 13:37:46 GMT
+ * Generated on Fri, 16 Feb 2024 13:45:25 GMT
  */
 
 :root {
@@ -20,6 +20,7 @@
   --ticketing-custom-properties-ticketing-c-gray-dark: #3e3e4b;
   --ticketing-custom-properties-ticketing-c-black: #000000;
   --ticketing-custom-properties-ticketing-c-white: #ffffff;
+  --ticketing-custom-properties-ticketing-lc-red-light: #ffc0c8;
   --ticketing-custom-properties-ticketing-cosmic-special-color: #d7abab;
   --ticketing-custom-properties-ticketing-lc-blue-on-white: #0080a7;
   --ticketing-custom-properties-ticketing-lc-blue-sky: #00bce7;
@@ -34,7 +35,6 @@
   --ticketing-custom-properties-ticketing-lc-purple: #412784;
   --ticketing-custom-properties-ticketing-lc-pink-dark: #a91e8d;
   --ticketing-custom-properties-ticketing-lc-red-dark: #e82626;
-  --ticketing-custom-properties-ticketing-lc-red-light: #ffc0c8;
   --ticketing-custom-properties-ticketing-lc-red-error: #de0000;
   --ticketing-custom-properties-ticketing-lc-orange: #ff7f41;
   --ticketing-custom-properties-ticketing-lc-yellow-light: #fff99e;
@@ -43,6 +43,31 @@
   --ticketing-custom-properties-ticketing-lc-indigo: #15152f;
   --ticketing-custom-properties-ticketing-lc-grape: #312467;
   --ticketing-custom-properties-ticketing-lc-pill-hover: #1f1f1f;
+  --ticketing-custom-properties-ticketing-rounded-full: 9999;
+  --ticketing-custom-properties-ticketing-font-size-xs: 12;
+  --ticketing-custom-properties-ticketing-line-height-xs: 16;
+  --ticketing-custom-properties-ticketing-font-size-sm: 14;
+  --ticketing-custom-properties-ticketing-line-height-sm: 20;
+  --ticketing-custom-properties-ticketing-font-size-base: 16;
+  --ticketing-custom-properties-ticketing-line-height-base: 24;
+  --ticketing-custom-properties-ticketing-font-size-lg: 18;
+  --ticketing-custom-properties-ticketing-line-height-lg: 28;
+  --ticketing-custom-properties-ticketing-font-size-xl: 20;
+  --ticketing-custom-properties-ticketing-line-height-xl: 28;
+  --ticketing-custom-properties-ticketing-font-size-2xl: 24;
+  --ticketing-custom-properties-ticketing-line-height-2xl: 32;
+  --ticketing-custom-properties-ticketing-font-size-3xl: 30;
+  --ticketing-custom-properties-ticketing-line-height-3xl: 36;
+  --ticketing-custom-properties-ticketing-font-size-4xl: 36;
+  --ticketing-custom-properties-ticketing-line-height-4xl: 40;
+  --ticketing-custom-properties-ticketing-font-size-5xl: 48;
+  --ticketing-custom-properties-ticketing-font-size-6xl: 60;
+  --ticketing-custom-properties-ticketing-font-size-7xl: 72;
+  --ticketing-custom-properties-ticketing-font-size-8xl: 96;
+  --ticketing-custom-properties-ticketing-font-size-9xl: 128;
+  --ticketing-custom-properties-ticketing-pill-rounded-closed: 40;
+  --ticketing-custom-properties-ticketing-pill-rounded-open: 34;
+  --ticketing-custom-properties-ticketing-r0-5: 2;
   --ticketing-custom-properties-ticketing-r1: 4;
   --ticketing-custom-properties-ticketing-r1-5: 6;
   --ticketing-custom-properties-ticketing-r2: 8;
@@ -77,31 +102,6 @@
   --ticketing-custom-properties-ticketing-r72: 288;
   --ticketing-custom-properties-ticketing-r80: 320;
   --ticketing-custom-properties-ticketing-r96: 384;
-  --ticketing-custom-properties-ticketing-rounded-full: 9999;
-  --ticketing-custom-properties-ticketing-font-size-xs: 12;
-  --ticketing-custom-properties-ticketing-line-height-xs: 16;
-  --ticketing-custom-properties-ticketing-font-size-sm: 14;
-  --ticketing-custom-properties-ticketing-line-height-sm: 20;
-  --ticketing-custom-properties-ticketing-font-size-base: 16;
-  --ticketing-custom-properties-ticketing-line-height-base: 24;
-  --ticketing-custom-properties-ticketing-font-size-lg: 18;
-  --ticketing-custom-properties-ticketing-line-height-lg: 28;
-  --ticketing-custom-properties-ticketing-font-size-xl: 20;
-  --ticketing-custom-properties-ticketing-line-height-xl: 28;
-  --ticketing-custom-properties-ticketing-font-size-2xl: 24;
-  --ticketing-custom-properties-ticketing-line-height-2xl: 32;
-  --ticketing-custom-properties-ticketing-font-size-3xl: 30;
-  --ticketing-custom-properties-ticketing-line-height-3xl: 36;
-  --ticketing-custom-properties-ticketing-font-size-4xl: 36;
-  --ticketing-custom-properties-ticketing-line-height-4xl: 40;
-  --ticketing-custom-properties-ticketing-font-size-5xl: 48;
-  --ticketing-custom-properties-ticketing-font-size-6xl: 60;
-  --ticketing-custom-properties-ticketing-font-size-7xl: 72;
-  --ticketing-custom-properties-ticketing-font-size-8xl: 96;
-  --ticketing-custom-properties-ticketing-font-size-9xl: 128;
-  --ticketing-custom-properties-ticketing-pill-rounded-closed: 40;
-  --ticketing-custom-properties-ticketing-pill-rounded-open: 34;
-  --ticketing-custom-properties-ticketing-r0-5: 2;
   --colors-basic-mode-1-brand-pink-ondark-clickable: #ec0089;
   --colors-basic-mode-1-brand-pink-onlight-clickable: #e40089;
   --colors-basic-mode-1-brand-blue: #00bce7;
