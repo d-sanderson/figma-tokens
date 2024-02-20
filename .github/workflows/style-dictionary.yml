@@ -23,20 +23,18 @@ jobs:
 
     - name: Build Style Dictionary
       run: npm run build
-
-    - name: Bump version
-      run: npm version patch
-
+ 
     - name: Commit Generated Platform Deliverables
       id: "auto-commit-action"
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update design tokens
+        
+    - name: Bump version
+      run: npm version patch
 
-    - name: "Run if changes have been detected"
-      if: steps.auto-commit-action.outputs.changes_detected == 'true'
-      run: echo "Changes!"
-
-    - name: "Run if no changes have been detected"
-      if: steps.auto-commit-action.outputs.changes_detected == 'false'
-      run: echo "No Changes!"
+    - name: Commit Generated Platform Deliverables
+      id: "auto-commit-action-2"
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: bump version
