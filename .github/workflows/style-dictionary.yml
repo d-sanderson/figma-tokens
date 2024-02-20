@@ -24,6 +24,9 @@ jobs:
     - name: Build Style Dictionary
       run: npm run build
 
+    - name: Bump version
+      run: npm version patch
+
     - name: Commit Generated Platform Deliverables
       id: "auto-commit-action"
       uses: stefanzweifel/git-auto-commit-action@v4
