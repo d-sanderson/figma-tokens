@@ -1,24 +1,28 @@
-name: Bump version
+name: Bump Version
+
 on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
+
 jobs:
-  build:
+  bump_version:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v3
-      with:
-        node-version: '14'   
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-    - name: Bump Version of package.json
-      uses: ramonpaolo/bump-version@v2.3.1
-      with: 
-        tag: ${{ github.ref_name }} # Accessing the context and get the reference_name, that in this case, is the tag that you created(ex: v1.0.0)
-        commit: true
-        branch_to_push: 'main'
-      
+      - name: Bump Version
+        run: npm version patch -m "Bump version to %s"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
