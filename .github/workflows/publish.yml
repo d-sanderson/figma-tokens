@@ -12,7 +12,10 @@ jobs:
         with:
           node-version: "20"
 
-      - run: npm ci
-      - uses: JS-DevTools/npm-publish@v3
+      - name: CI Setup
+        run: npm ci
+
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
