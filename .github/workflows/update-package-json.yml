@@ -18,7 +18,7 @@ jobs:
           node-version: '14'
 
       - name: Bump Version
-        run: npm version patch -m "Bump version to %s"
+        run: npm version patch -m "Bump version"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
