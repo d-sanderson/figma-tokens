@@ -8,17 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-
-      - name: Bump version
-        run: npm version patch
-
-      - name: Commit Generated Platform Deliverables
-        id: "auto-commit-action"
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: commit bumped version
-        
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
