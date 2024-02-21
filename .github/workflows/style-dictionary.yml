@@ -21,14 +21,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Bump Version
-      run: npm version patch -m "Bump version to %s"
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Build Style Dictionary
       run: npm run build
-
+ 
     - name: Commit Generated Platform Deliverables
       id: "auto-commit-action"
       uses: stefanzweifel/git-auto-commit-action@v4
