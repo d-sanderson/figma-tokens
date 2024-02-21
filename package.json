@@ -1,6 +1,6 @@
 {
   "name": "figma-variables-to-style-dictionary",
-  "version": "1.2.6",
+  "version": "1.2.5",
   "description": "",
   "main": "index.js",
   "scripts": {
