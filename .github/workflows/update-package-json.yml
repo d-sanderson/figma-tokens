@@ -22,7 +22,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push Changes
-        uses: ad-m/github-push-action@master
+      - name: Commit update package.json and package-lock.json
+        id: "auto-commit-action"
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: commit bumped package.json
+        
