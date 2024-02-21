@@ -1,9 +1,9 @@
 name: Generate CSS from Design Tokens
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [develop]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,4 +39,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Update design tokens
-        
