@@ -30,11 +30,3 @@ jobs:
       with:
         commit_message: Update design tokens
         
-    # - name: Bump version
-    #   run: npm version patch
-
-    # - name: Commit Generated Platform Deliverables
-    #   id: "auto-commit-action-2"
-    #   uses: stefanzweifel/git-auto-commit-action@v4
-    #   with:
-    #     commit_message: bump version

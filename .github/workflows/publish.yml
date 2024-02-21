@@ -11,6 +11,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
+      - name: Bump version
+        run: npm version patch
+      
+      - name: Commit Generated Platform Deliverables
+        id: "auto-commit-action"
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: bump version
+
       - run: npm ci
       - run: npm test
       - uses: JS-DevTools/npm-publish@v3
