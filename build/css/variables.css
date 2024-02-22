@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 21 Feb 2024 20:40:49 GMT
+ * Generated on Thu, 22 Feb 2024 00:53:54 GMT
  */
 
 :root {
@@ -81,6 +81,7 @@
   --tix-border-radius-rounded-full: 624.9375rem;
   --tix-border-radius-pill-rounded-open: 2.125rem;
   --tix-border-radius-pill-rounded-closed: 2.5rem;
+  --tix-font-font-size-xxs: 0.5rem;
   --tix-font-font-size-xs: 0.75rem;
   --tix-font-font-size-sm: 0.875rem;
   --tix-font-font-size-base: 1rem;
